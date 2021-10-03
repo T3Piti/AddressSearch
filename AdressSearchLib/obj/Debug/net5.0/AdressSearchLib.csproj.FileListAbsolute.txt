@@ -1,0 +1,12 @@
+C:\Users\ККК\source\repos\AdressSearch\AdressSearchLib\bin\Debug\net5.0\AdressSearchLib.deps.json
+C:\Users\ККК\source\repos\AdressSearch\AdressSearchLib\bin\Debug\net5.0\AdressSearchLib.dll
+C:\Users\ККК\source\repos\AdressSearch\AdressSearchLib\bin\Debug\net5.0\ref\AdressSearchLib.dll
+C:\Users\ККК\source\repos\AdressSearch\AdressSearchLib\bin\Debug\net5.0\AdressSearchLib.pdb
+C:\Users\ККК\source\repos\AdressSearch\AdressSearchLib\obj\Debug\net5.0\AdressSearchLib.csproj.AssemblyReference.cache
+C:\Users\ККК\source\repos\AdressSearch\AdressSearchLib\obj\Debug\net5.0\AdressSearchLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ККК\source\repos\AdressSearch\AdressSearchLib\obj\Debug\net5.0\AdressSearchLib.AssemblyInfoInputs.cache
+C:\Users\ККК\source\repos\AdressSearch\AdressSearchLib\obj\Debug\net5.0\AdressSearchLib.AssemblyInfo.cs
+C:\Users\ККК\source\repos\AdressSearch\AdressSearchLib\obj\Debug\net5.0\AdressSearchLib.csproj.CoreCompileInputs.cache
+C:\Users\ККК\source\repos\AdressSearch\AdressSearchLib\obj\Debug\net5.0\AdressSearchLib.dll
+C:\Users\ККК\source\repos\AdressSearch\AdressSearchLib\obj\Debug\net5.0\ref\AdressSearchLib.dll
+C:\Users\ККК\source\repos\AdressSearch\AdressSearchLib\obj\Debug\net5.0\AdressSearchLib.pdb

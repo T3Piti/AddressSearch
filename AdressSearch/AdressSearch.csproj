@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Ubuntu-Bold.ttf" />
+    <None Remove="Fonts\Ubuntu-BoldItalic.ttf" />
+    <None Remove="Fonts\Ubuntu-Italic.ttf" />
+    <None Remove="Fonts\Ubuntu-Light.ttf" />
+    <None Remove="Fonts\Ubuntu-LightItalic.ttf" />
+    <None Remove="Fonts\Ubuntu-Medium.ttf" />
+    <None Remove="Fonts\Ubuntu-MediumItalic.ttf" />
+    <None Remove="Fonts\Ubuntu-Regular.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\Ubuntu-Bold.ttf" />
+    <Resource Include="Fonts\Ubuntu-BoldItalic.ttf" />
+    <Resource Include="Fonts\Ubuntu-Italic.ttf" />
+    <Resource Include="Fonts\Ubuntu-Light.ttf" />
+    <Resource Include="Fonts\Ubuntu-LightItalic.ttf" />
+    <Resource Include="Fonts\Ubuntu-Medium.ttf" />
+    <Resource Include="Fonts\Ubuntu-MediumItalic.ttf" />
+    <Resource Include="Fonts\Ubuntu-Regular.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dadata" Version="21.9.0" />
+    <PackageReference Include="Expression.Blend.Sdk.WPF" Version="1.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdressSearchLib\AdressSearchLib.csproj" />
+  </ItemGroup>
+
+</Project>

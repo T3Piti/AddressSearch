@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "UkD5KAK5epl7DQKzaQkeoXxuvLPd3LKjCw7yU+dZuE+AB6D4ZCaxWFYBYWpGwDQUqX/ABUcH2AOZbZuP5FxSnQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ККК\\source\\repos\\AdressSearch\\ApiRequestLib\\ApiRequestLib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ККК\\.nuget\\packages\\restsharp\\106.12.0\\restsharp.106.12.0.nupkg.sha512"
+  ],
+  "logs": []
+}

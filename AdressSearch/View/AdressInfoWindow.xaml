@@ -1,0 +1,63 @@
+﻿<Window x:Class="AdressSearch.View.AdressInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdressSearch.View"
+        mc:Ignorable="d"
+        Title="Adress Info" Height="450" Width="800"
+        Style="{StaticResource WindowStyle}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+            <Label Content="Город" />
+            <Label Content="{Binding City, Mode=Default}" Style="{StaticResource LabelInfoStyle}"/>
+            <Label Content="Fias код города" />
+            <Label Content="{Binding FiasCity, Mode=Default}" Style="{StaticResource LabelInfoStyle}"/>
+            <Label Content="Fias код улицы"/>
+            <Label Content="{Binding FiasStreet, Mode=Default}" Style="{StaticResource LabelInfoStyle}"/>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Номер дома"/>
+                    <Label Content="{Binding HouseNumber, Mode=Default}" Style="{StaticResource LabelInfoStyle}"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Корпус дома"/>
+                    <Label Content="{Binding HouseBuilding, Mode=Default}" Style="{StaticResource LabelInfoStyle}"/>
+                </StackPanel>
+            </StackPanel>
+            <Label Content="Fias код дома"/>
+            <Label Content="{Binding FiasHouse, Mode=Default}" Style="{StaticResource LabelInfoStyle}"/>
+            <Label Content="Геоданные дома"/>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Широта"/>
+                    <Label Content="{Binding GeoHouseLat,Mode=Default}" Style="{StaticResource LabelInfoStyle}"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Долгота"/>
+                    <Label Content="{Binding GeoHouseLon}" Style="{StaticResource LabelInfoStyle}"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Количесвто этажей"/>
+                    <Label Content="10" Style="{StaticResource LabelInfoStyle}"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Количество подъездов"/>
+                    <Label Content="6" Style="{StaticResource LabelInfoStyle}"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
