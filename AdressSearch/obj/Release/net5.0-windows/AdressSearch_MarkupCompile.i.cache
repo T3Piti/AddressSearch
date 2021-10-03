@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET5_0;NETCOREAPP
 C:\Users\ККК\source\repos\AdressSearch\AdressSearch\App.xaml
-4-1218586427
+4602609248
 
-11-842054216
+9-2124484243
 198995625408
-Styles\AdressInfoStyles.xaml;Styles\WindowStyles.xaml;View\AdressInfoWindow.xaml;View\SearchAdressWindow.xaml;
+Styles\AdressInfoStyles.xaml;Styles\SearchAdressWindowStyles.xaml;View\AdressInfoWindow.xaml;View\SearchAdressWindow.xaml;
 
-True
+False
 

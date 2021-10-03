@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AdressSearch.View"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
-        Title="Search Adress" Height="450" Width="800"
+        Title="Поиск по адресу" MinHeight="250" MinWidth="400"
         Style="{StaticResource WindowStyle}">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -15,27 +15,18 @@
             <ColumnDefinition Width="0.1*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="0.1*"/>
         </Grid.RowDefinitions>
-        <DockPanel Grid.Row="0" Grid.Column="1" LastChildFill="False">
-            <Button DockPanel.Dock="Left" Content="Адрес" Style="{StaticResource NavButtonStyle}"/>
-            <Button DockPanel.Dock="Left" Content="Адрес по полям" Style="{StaticResource NavButtonStyle}"/>
-        </DockPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
             <Label Content="Город, улица, дом, квартира"/>
             <ComboBox Style="{StaticResource ComboBoxStyle}"
                       IsDropDownOpen="{Binding IsDropDownListOpen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                       ItemsSource="{Binding SuggestionAdresses}"
                       DisplayMemberPath="value"
-                      SelectedValue="{Binding SelectedAdress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedValue="{Binding SelectedAdress, Mode=TwoWay}"
                       Text="{Binding Adress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
-                <!--<i:Interaction.Triggers>
-                    <i:EventTrigger EventName="KeyDown">
-                        <i:InvokeCommandAction Command="{Binding KeyDowncommand}"/>
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>-->
             </ComboBox>
         </StackPanel>
     </Grid>

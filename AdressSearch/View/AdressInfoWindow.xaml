@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AdressSearch.View"
         mc:Ignorable="d"
-        Title="Adress Info" Height="450" Width="800"
-        Style="{StaticResource WindowStyle}">
+        Title="Информация о адресе" MinHeight="600" MinWidth="400"
+        Style="{StaticResource AdressInfoWindowStyle}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.1*"/>
@@ -15,10 +15,10 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.1*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition x:Name="SecondRow" Height="1*"/>
             <RowDefinition Height="0.1*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" CanVerticallyScroll="True" CanHorizontallyScroll="True">
             <Label Content="Город" />
             <Label Content="{Binding City, Mode=Default}" Style="{StaticResource LabelInfoStyle}"/>
             <Label Content="Fias код города" />
@@ -50,12 +50,12 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <StackPanel Orientation="Vertical">
-                    <Label Content="Количесвто этажей"/>
-                    <Label Content="10" Style="{StaticResource LabelInfoStyle}"/>
+                    <Label Content="Этаж"/>
+                    <Label Content="{Binding FloorNumber, Mode=Default}" Style="{StaticResource LabelInfoStyle}"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
-                    <Label Content="Количество подъездов"/>
-                    <Label Content="6" Style="{StaticResource LabelInfoStyle}"/>
+                    <Label Content="Подъезд"/>
+                    <Label Content="{Binding EntranceNumber,Mode=Default}" Style="{StaticResource LabelInfoStyle}"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

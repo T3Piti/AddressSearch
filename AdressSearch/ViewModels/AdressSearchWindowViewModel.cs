@@ -33,7 +33,7 @@ namespace AdressSearch.ViewModels
             get => _selectedAdress;
             set
             {
-                _selectedAdress = value;
+                _selectedAdress = null;
                 OnPropertyChanged();
                 if(value != null)
                 {

@@ -15,10 +15,10 @@ namespace AdressSearch.ViewModels
         private string _city;
         public string City 
         {
-            get => _city;
+            get => this._city;
             set 
             {
-                _city = value;
+                this._city = value;
                 OnPropertyChanged();
             }
 
@@ -26,91 +26,108 @@ namespace AdressSearch.ViewModels
         private string _fiasCity;
         public string FiasCity 
         {
-            get => _fiasCity;
+            get => this._fiasCity;
             set
             {
-                _fiasCity = value;
+                this._fiasCity = value;
                 OnPropertyChanged();
             }
         }
         private string _fiasStreet;
         public string FiasStreet 
         {
-            get => _fiasStreet;
+            get => this._fiasStreet;
             set 
             {
-                _fiasStreet = value;
+                this._fiasStreet = value;
                 OnPropertyChanged();
             }
         }
         private string _houseNumber;
         public string HouseNumber
         {
-            get => _houseNumber;
+            get => this._houseNumber;
             set
             {
-                _houseNumber = value;
+                this._houseNumber = value;
                 OnPropertyChanged();
             }
         }
         private string _houseBuilding;
         public string HouseBuilding
         {
-            get => _houseBuilding;
+            get => this._houseBuilding;
             set 
             {
-                _houseBuilding = value;
+                this._houseBuilding = value;
                 OnPropertyChanged();
             }
         }
         private string _fiasHouse;
         public string FiasHouse
         {
-            get => _fiasHouse;
+            get => this._fiasHouse;
             set 
             {
-                _fiasHouse = value;
+                this._fiasHouse = value;
                 OnPropertyChanged();
             }
         }
         private string _geoHouseLat;
         public string GeoHouseLat
         {
-            get => _geoHouseLat;
+            get => this._geoHouseLat;
             set
             {
-                _geoHouseLat = value;
+                this._geoHouseLat = value;
                 OnPropertyChanged();
             }
         }
         private string _geoHouseLon;
         public string GeoHouseLon
         {
-            get => _geoHouseLon;
+            get => this._geoHouseLon;
             set
             {
-                _geoHouseLon = value;
+                this._geoHouseLon = value;
                 OnPropertyChanged();
             }
-        }      
+        }
+        private string _floorNumber;
+        public string FloorNumber
+        {
+            get => this._floorNumber;
+            set
+            {
+                this._floorNumber = value;
+                OnPropertyChanged();
+            }
+        }
+        private string _entranceNumber;
+        public string EntranceNumber
+        {
+            get => this._entranceNumber;
+            set
+            {
+                this._entranceNumber = value;
+                OnPropertyChanged();
+            }
+        }
         public AdressInfoWindowViewModel(Suggestion<Address> adress)
         {
-            FillAdressInfo(adress).Wait();
-        }
+            var adressInfo = AdressApi.GetInfoByAdress(adress.value);
+            City = adress.data.city ?? "Нет";
+            FiasCity = adress.data.city_fias_id ?? "Нет";
+            FiasStreet = adressInfo.street_fias_id ?? "Нет";
+            HouseNumber = adressInfo.house ?? "Нет";
+            HouseBuilding = adressInfo.block ?? "Нет";
+            FiasHouse = adressInfo.house_fias_id ?? "Нет";
+            GeoHouseLat = adressInfo.geo_lat ?? "Нет";
+            GeoHouseLon = adressInfo.geo_lon ?? "Нет";
+            FloorNumber = adressInfo.floor ?? "Нет";
+            EntranceNumber = adressInfo.entrance ?? "Нет";
 
-        private async Task FillAdressInfo(Suggestion<Address> adress)
-        {
-            var adressInfo = await AdressApi.GetInfoByAdress(adress.value);
-            City = adressInfo.city != null ? adressInfo.city : "Нет";
-            FiasCity = adressInfo.city_fias_id != null ? adressInfo.city_fias_id : "Нет";
-            FiasStreet = adressInfo.street_fias_id != null ? adressInfo.street_fias_id : "Нет";
-            HouseNumber = adressInfo.house != null ? adressInfo.house : "Нет";
-            HouseBuilding = adressInfo.block != null ? adressInfo.block : "Нет";
-            FiasHouse = adressInfo.house_fias_id != null ? adressInfo.house_fias_id : "Нет";
-            GeoHouseLat = adressInfo.geo_lat != null ? adressInfo.geo_lat : "Нет";
-            GeoHouseLon = adressInfo.geo_lon != null ? adressInfo.geo_lon : "Нет";
         }
-
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged([CallerMemberName] string prop = "") => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
     }
